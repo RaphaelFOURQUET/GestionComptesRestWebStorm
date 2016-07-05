@@ -1,0 +1,25 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>getClients</p>
+
+<br/>
+<div ng-if="groupes">
+    <p>Success</p>
+    {{groupes}}
+
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th>Numero Groupe</th>
+            <th>Nom</th>
+        </tr>
+        <tr ng-repeat="groupe in groupes">
+            <td>{{groupe.idGroupe}}</td>
+            <td>{{groupe.nomGroupe}}</td>
+        </tr>
+    </table>
+</div>

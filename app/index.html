@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-app="app">
+
+<div ng-include="'src/views/include/navbar.html'"></div>
+
+<!-- On va integrer des bouts d'autres pages en vue ici. -->
+<div ng-view></div>
+
+
+<!-- Sources-->
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<!-- Config app-->
+<script type="text/javascript" src="app.js"></script>
+<!-- Route -->
+<script type="text/javascript" src="routing.js"></script>
+<!-- Static DATA-->
+<script type="text/javascript" src="js/const/data.js"></script>
+<!-- Controllers -->
+<script type="text/javascript" src="js/controller/banque/CtrlGetListeComptes.js"></script>
+<script type="text/javascript" src="js/controller/banque/CtrlAddBanque.js"></script>
+<script type="text/javascript" src="js/controller/banque/CtrlAddBanqueToCompte.js"></script>
+
+<script type="text/javascript" src="js/controller/client/CtrlGetClients.js"></script>
+<script type="text/javascript" src="js/controller/client/CtrlGetClient.js"></script>
+<script type="text/javascript" src="js/controller/client/CtrlAddClient.js"></script>
+<script type="text/javascript" src="js/controller/client/CtrlDeleteClient.js"></script>
+<script type="text/javascript" src="js/controller/client/CtrlUpdateClient.js"></script>
+<script type="text/javascript" src="js/controller/client/CtrlGetClientByMc.js"></script>
+
+<script type="text/javascript" src="js/controller/employe/CtrlAddEmploye.js"></script>
+<script type="text/javascript" src="js/controller/employe/CtrlGetEmployes.js"></script>
+<script type="text/javascript" src="js/controller/employe/CtrlAddEmployeToGroupe.js"></script>
+<script type="text/javascript" src="js/controller/employe/CtrlGetEmployesGroupe.js"></script>
+
+<script type="text/javascript" src="js/controller/groupe/CtrlGetGroupes.js"></script>
+<script type="text/javascript" src="js/controller/groupe/CtrlAddGroupe.js"></script>
+
+<script type="text/javascript" src="js/controller/compte/CtrlAddCompte.js"></script>
+<script type="text/javascript" src="js/controller/compte/CtrlDeleteCompte.js"></script>
+<script type="text/javascript" src="js/controller/compte/CtrlGetCompte.js"></script>
+<script type="text/javascript" src="js/controller/compte/CtrlUpdateCompte.js"></script>
+<script type="text/javascript" src="js/controller/compte/CtrlGetComptesByClient.js"></script>
+<script type="text/javascript" src="js/controller/compte/CtrlGetComptesByEmploye.js"></script>
+
+<script type="text/javascript" src="js/controller/operation/CtrlVerser.js"></script>
+<script type="text/javascript" src="js/controller/operation/CtrlRetirer.js"></script>
+<script type="text/javascript" src="js/controller/operation/CtrlVirement.js"></script>
+<script type="text/javascript" src="js/controller/operation/CtrlGetOperationsByCompte.js"></script>
+
+<!-- Services -->
+<script type="text/javascript" src="js/service/serviceFactoryBanque.js"></script>
+<script type="text/javascript" src="js/service/serviceFactoryClient.js"></script>
+<script type="text/javascript" src="js/service/serviceFactoryEmploye.js"></script>
+<script type="text/javascript" src="js/service/serviceFactoryGroupe.js"></script>
+<script type="text/javascript" src="js/service/serviceFactoryCompte.js"></script>
+<script type="text/javascript" src="js/service/serviceFactoryOperation.js"></script>
+
+</body>
+</html>

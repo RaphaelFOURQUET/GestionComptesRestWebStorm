@@ -1,0 +1,24 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>deleteClient</p>
+
+<div>
+    <form>
+        <label>Id Client</label>
+        <input type="number" ng-model="idClient">
+        <button class="btn btn-info" ng-click="deleteClient(idClient)">Delete</button>
+    </form>
+</div>
+
+<br/>
+<div ng-if="client">
+    <p>Success</p>
+    {{client}}
+
+    <div ng-include="'src/views/client/include/client.html'"></div>
+</div>

@@ -1,0 +1,33 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>addGroupe</p>
+
+<div>
+    <form>
+        <label>Nom Groupe</label>
+        <input type="text" ng-model="nomGroupe">
+        <button class="btn btn-info" ng-click="addGroupe()">Creer</button>
+    </form>
+</div>
+
+<br/>
+<div ng-if="groupe">
+    <p>Success</p>
+    {{groupe}}
+
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th>Numero Groupe</th>
+            <th>Nom</th>
+        </tr>
+        <tr>
+            <td>{{groupe.idGroupe}}</td>
+            <td>{{groupe.nomGroupe}}</td>
+        </tr>
+    </table>
+</div>

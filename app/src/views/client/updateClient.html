@@ -1,0 +1,35 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>updateClient</p>
+
+<div>
+    <form>
+        <label>ID :</label>
+        <input type="number" ng-model="idClient" ng-change="infos()">
+        <!--<button class="btn btn-info" ng-click="infos()">Chercher infos</button>-->
+        <br/>
+
+        <label>Nom Client</label>
+        <input type="text" ng-model="nomClient">
+        <label>Prenom Client</label>
+        <input type="text" ng-model="prenomClient">
+        <label>Date de Naissance</label>
+        <input type="date" ng-model="DateNaissClient">
+        <label>Adresse</label>
+        <input type="text" ng-model="adresseClient">
+        <button class="btn btn-info" ng-click="updateClient()">Update</button>
+    </form>
+</div>
+
+<br/>
+<div ng-if="client">
+    <p>Success</p>
+    {{client}}
+
+    <div ng-include="'src/views/client/include/client.html'"></div>
+</div>

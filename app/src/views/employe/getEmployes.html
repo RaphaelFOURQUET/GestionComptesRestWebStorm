@@ -1,0 +1,25 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>getEmployes</p>
+
+<br/>
+<div ng-if="employes">
+    <p>Success</p>
+    {{employes}}
+
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th>Numero Employe</th>
+            <th>Nom</th>
+        </tr>
+        <tr ng-repeat="employe in employes">
+            <td>{{employe.codeEmploye}}</td>
+            <td>{{employe.nomEmploye}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,46 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>updateCompte</p>
+
+<div>
+    <form>
+        <label>ID :</label>
+        <input type="number" ng-model="idCompte" ng-change="infos()">
+        <!--<button class="btn btn-info" ng-click="infos()">Chercher infos</button>-->
+        <br/>
+
+        <label>Solde Compte</label>
+        <input type="number" ng-model="soldeCompte">
+        <label>Employe Responsable</label>
+        <input type="number" ng-model="idEmploye">
+        <button class="btn btn-info" ng-click="updateCompte()">Update</button>
+    </form>
+</div>
+
+<br/>
+<div ng-if="compte">
+    <p>Success</p>
+    {{compte}}
+
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th>Numero De Compte</th>
+            <th>Solde</th>
+            <th>Date De Creation</th>
+            <th>Numero Client</th>
+            <th>Numero Employe</th>
+        </tr>
+        <tr>
+            <td>{{compte.numeroCompte}}</td>
+            <td>{{compte.soldeCompte}}</td>
+            <td>{{compte.dateDeCreation |date}}</td>
+            <td>{{compte.client.idClient}}</td>
+            <td>{{compte.employe.codeEmploye}}</td>
+        </tr>
+    </table>
+</div>

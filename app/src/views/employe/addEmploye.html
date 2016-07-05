@@ -1,0 +1,33 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>addEmploye</p>
+
+<div>
+    <form>
+        <label>Nom Employe</label>
+        <input type="text" ng-model="nomEmploye">
+        <button class="btn btn-info" ng-click="addEmploye()">Creer</button>
+    </form>
+</div>
+
+<br/>
+<div ng-if="employe">
+    <p>Success</p>
+    {{employe}}
+
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th>Numero Employe</th>
+            <th>Nom</th>
+        </tr>
+        <tr>
+            <td>{{employe.codeEmploye}}</td>
+            <td>{{employe.nomEmploye}}</td>
+        </tr>
+    </table>
+</div>

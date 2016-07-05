@@ -1,0 +1,39 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>getCompte</p>
+
+<div>
+    <form>
+        <label>Id Compte</label>
+        <input type="number" ng-model="idCompte">
+        <button class="btn btn-info" ng-click="getCompte(idCompte)">Rechercher</button>
+    </form>
+</div>
+
+<br/>
+<div ng-if="compte">
+    <p>Success</p>
+    {{compte}}
+
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th>Numero De Compte</th>
+            <th>Solde</th>
+            <th>Date De Creation</th>
+            <th>Numero Client</th>
+            <th>Numero Employe</th>
+        </tr>
+        <tr>
+            <td>{{compte.numeroCompte}}</td>
+            <td>{{compte.soldeCompte}}</td>
+            <td>{{compte.dateDeCreation |date}}</td>
+            <td>{{compte.client.idClient}}</td>
+            <td>{{compte.employe.codeEmploye}}</td>
+        </tr>
+    </table>
+</div>

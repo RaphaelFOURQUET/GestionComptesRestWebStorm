@@ -1,0 +1,38 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>getListeComptes</p>
+
+<div>
+    <form>
+        <label>IdBanque :</label>
+        <input type="number" ng-model="id">
+        <button class="btn btn-info" ng-click="getListeComptes(id)">Chercher</button>
+    </form>
+</div>
+
+<br/>
+<div ng-if="comptes">
+    <p>Success</p>
+    {{comptes}}
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th>Numero</th>
+            <th>Solde</th>
+            <th>Date de Creation</th>
+            <th>Numero Client</th>
+            <th>Numero Employe</th>
+        </tr>
+        <tr ng-repeat="c in comptes[0]">
+            <td>{{c.numeroCompte}}</td>
+            <td>{{c.soldeCompte}}</td>
+            <td>{{c.dateDeCreation | date}}</td>
+            <td>{{c.client.idClient}}</td>
+            <td>{{c.employe.codeEmploye}}</td>
+        </tr>
+    </table>
+</div>

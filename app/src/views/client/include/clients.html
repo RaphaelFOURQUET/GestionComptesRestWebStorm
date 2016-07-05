@@ -1,0 +1,16 @@
+<table class="table table-bordered table-condensed table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Date de Naissance</th>
+        <th>Adresse</th>
+    </tr>
+    <tr ng-repeat="client in clients">
+        <td>{{client.idClient}}</td>
+        <td>{{client.nomClient}}</td>
+        <td>{{client.prenomClient}}</td>
+        <td>{{client.dateDeNaissance | date}}</td>
+        <td>{{client.addrPosta}}</td>
+    </tr>
+</table>

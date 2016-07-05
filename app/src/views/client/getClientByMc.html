@@ -1,0 +1,24 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>getClientByMC</p>
+
+<div>
+    <form>
+        <label>Filtrer</label>
+        <input type="text" ng-model="mc">
+        <button class="btn btn-info" ng-click="getClientByMc(mc)">Rechercher</button>
+    </form>
+</div>
+
+<br/>
+<div ng-if="clients">
+    <p>Success</p>
+    {{clients}}
+
+    <div ng-include="'src/views/client/include/clients.html'"></div>
+</div>
